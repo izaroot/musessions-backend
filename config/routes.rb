@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post '/register', to: 'users#create'
   post '/login', to: 'users#login'
   get '/profile', to: 'users#profile'
+
+  mount ActionCable.server => '/cable'
 end
